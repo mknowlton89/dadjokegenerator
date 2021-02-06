@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+* {
+    background-color: white;
+}
 
 .main-container {
     display: flex;
@@ -7,8 +11,15 @@
     min-height: 80vh;
     flex-direction: column;
     font-family: Quicksand;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
+    text-transform: capitalize;
+}
+
+h1 {
+    color: #d9d9d9;
+    font-size: 80px;
+    margin-bottom: 0px;
 }
 
 #copy {
@@ -17,19 +28,20 @@
 }
 
 .button-submit {
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
     font-size: 18px;
-    background-color:#83c5be;
-    color:#006d77;
-    border-radius: 4px;
+    background-color:#3c6e71;
+    color: white;
+    border-radius: 60px;
     border: none;
     cursor: pointer;
     margin: 10px;
+    margin-bottom: 30px;
 }
 
 .button-submit:hover {
-    background-color: #006d77;
+    background-color: #284b63;
     color: #edf6f9;
     transition-duration: .3s;
 }
@@ -40,6 +52,7 @@
 
 #joke {
     margin: 10px;
+    color: #353535;
 }
 
 #copy {
