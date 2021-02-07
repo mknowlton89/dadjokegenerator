@@ -22,10 +22,10 @@ h1 {
     margin-bottom: 0px;
 }
 
-#copy {
+/* #copy {
     cursor: pointer;
-    visibility: hidden;
-}
+    /* visibility: hidden; */
+/* } */
 
 .button-submit {
     width: 200px;
@@ -56,7 +56,22 @@ h1 {
     font-size: 20px
 }
 
-#copy {
+/* #copy {
     font-size: 12px;
     font-weight: 300;
+} */
+
+#engagement-container {
+    display: flex;
+    align-items: center;
+    width: 90vh;
+    justify-content: center;
+    visibility: hidden;
+    margin-top: 25px;
+}
+
+#shareFb,#shareIg,#copy,#favorite {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
 }

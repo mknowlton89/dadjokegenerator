@@ -4,12 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dad Jokes</title>
+        <title>Dad Jokes | Favorites</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body onload="loadFavs()">
 
         <!-- As a heading
         <nav class="navbar navbar-light bg-light">
@@ -20,20 +20,16 @@
 
         <div class="main-container">
             <div class="joke-container">
-                <h1><b>Dad Jokes On Demand</b></h1>
+                <h1><b>My Favorite Jokes</b></h1>
                 <button class="button-submit" onclick="fetchjoke()">I'm Feeling Lucky</button>
             </div>
 
-            <div id="joke"></div>
+            <div id="favJokes">
+                <list>
+                    <ul id="favList"></ul>
+                </list>
 
-            <div id="engagement-container">
-                <div id="copy" onclick="CopyToClipboard()"><img id="copyicon" src="svgs/clipboard.svg"> Copy</div>
-                <div id="shareFb" onclick="shareToFacebook()"><img id="shareFbicon" src="svgs/facebook.svg"> Share</div>
-                <div id="shareIg" onclick="shareToInstagram()"><img id="shareIgicon" src="svgs/instagram.svg"> Share</div>
-                <div id="favorite" onclick="favorite()"><img id="favicon" src="svgs/star.svg"> Favorite</div>
             </div>
-
-    </div>
 
         <script src="scripts.js" async defer></script>
 
