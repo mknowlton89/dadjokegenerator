@@ -35,27 +35,58 @@ function CopyToClipboard() {
 }
 
 function favorite() {
-    // document.getElementById("favorite").innerHTML = " Unfavorite";
-    document.getElementById("favicon").src = "svgs/star-fill.svg";
 
-    // Get the joke in a string.
-    const joke = document.getElementById("joke").innerHTML;
+    let favStatus = document.getElementById("favorite");
 
-    let favs = localStorage.getItem("favs");
+    if (favStatus.hasAttribute("status")) {
+        alert("unfav was called");
+        document.getElementById("favicon").src = "svgs/star.svg";
 
-    // if you already have any favorite jokes, add to it
-    if (favs) {
+        const joke = document.getElementById("joke").innerHTML;
+
+        let favs = localStorage.getItem("favs");
+
         favs = JSON.parse(favs);
+        console.log(favs);
 
-        const combinedJokes = [joke, ...favs]
-        localStorage.setItem("favs", JSON.stringify(combinedJokes));
+        // favs = favs.filter(item => !forDeletion.includes(joke))
+        // arr = arr.filter(item => item !== value)
+        favs = favs.filter(item => item !== joke)
 
+        console.log(favs);
     }
+
     else {
-        localStorage.setItem("favs", JSON.stringify([joke]));
-    }
+        
+        // document.getElementById("favorite").innerHTML = " Unfavorite";
+        document.getElementById("favicon").src = "svgs/star-fill.svg";
 
-    document.getElementById("favorite").style.pointerEvents = "none";
+        // Get the joke in a string.
+        const joke = document.getElementById("joke").innerHTML;
+
+        let favs = localStorage.getItem("favs");
+
+        // if you already have any favorite jokes, add to it
+        if (favs) {
+            favs = JSON.parse(favs);
+
+            const combinedJokes = [joke, ...favs]
+            localStorage.setItem("favs", JSON.stringify(combinedJokes));
+
+        }
+        else {
+            localStorage.setItem("favs", JSON.stringify([joke]));
+        }
+
+        // document.getElementById("favorite").style.pointerEvents = "none";
+        // x.setAttribute("target", "_self");
+        favStatus.setAttribute("status", "favorited");
+    }
+    
+
+    // else if (document.getElementById("favortie").attributes = "unfavorited") {
+    //     alert("unfav was called");
+    // }
 
 }
 
@@ -63,6 +94,8 @@ function resetState() {
     document.getElementById("copyicon").src = "svgs/clipboard.svg";
     document.getElementById("favicon").src = "svgs/star.svg";
     document.getElementById("favorite").style.pointerEvents = "auto";
+    document.getElementById("favorite").removeAttribute("status");
+
  
 }
 
