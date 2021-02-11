@@ -75,3 +75,7 @@ h1 {
     margin-right: 10px;
     cursor: pointer;
 }
+
+#favList {
+    text-align: left;
+}
