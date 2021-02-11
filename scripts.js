@@ -36,29 +36,31 @@ function CopyToClipboard() {
 
 function favorite() {
 
-    let favStatus = document.getElementById("favorite");
+    let favStatus = document.getElementById("favorite").getAttribute("status");
 
-    if (favStatus.hasAttribute("status")) {
-        alert("unfav was called");
+    let favButton = document.getElementById("favorite");
+
+    if (favStatus != null) {
+        
         document.getElementById("favicon").src = "svgs/star.svg";
+
+        document.getElementById("favorite").removeAttribute("status"); 
 
         const joke = document.getElementById("joke").innerHTML;
 
         let favs = localStorage.getItem("favs");
 
         favs = JSON.parse(favs);
-        console.log(favs);
 
-        // favs = favs.filter(item => !forDeletion.includes(joke))
-        // arr = arr.filter(item => item !== value)
         favs = favs.filter(item => item !== joke)
 
-        console.log(favs);
+        // Re-stringify the favs array and set it to local storage
+        localStorage.setItem("favs", JSON.stringify(favs));
+
     }
 
     else {
-        
-        // document.getElementById("favorite").innerHTML = " Unfavorite";
+
         document.getElementById("favicon").src = "svgs/star-fill.svg";
 
         // Get the joke in a string.
@@ -80,7 +82,7 @@ function favorite() {
 
         // document.getElementById("favorite").style.pointerEvents = "none";
         // x.setAttribute("target", "_self");
-        favStatus.setAttribute("status", "favorited");
+        favButton.setAttribute("status", "favorited");
     }
     
 
