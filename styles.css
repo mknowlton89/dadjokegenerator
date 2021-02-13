@@ -1,73 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
 
-* {
-    background-color: white;
-}
-
 .main-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    flex-direction: column;
     font-family: Quicksand;
     font-weight: 700;
     text-align: center;
-    text-transform: capitalize;
-}
-
-h1 {
-    color: #d9d9d9;
-    font-size: 80px;
-    margin-bottom: 0px;
-}
-
-/* #copy {
-    cursor: pointer;
-    /* visibility: hidden; */
-/* } */
-
-.button-submit {
-    width: 200px;
-    height: 70px;
-    font-size: 18px;
-    background-color:#3c6e71;
-    color: white;
-    border-radius: 60px;
-    border: none;
-    cursor: pointer;
-    margin: 10px;
-    margin-bottom: 30px;
-}
-
-.button-submit:hover {
-    background-color: #284b63;
-    color: #edf6f9;
-    transition-duration: .3s;
-}
-
-.button-submit:focus {
-    outline: none;
 }
 
 #joke {
     margin: 10px;
     color: #353535;
-    font-size: 20px
+    font-size: 20px;
+    margin-bottom: 25px;
 }
-
-/* #copy {
-    font-size: 12px;
-    font-weight: 300;
-} */
 
 #engagement-container {
     display: flex;
-    align-items: center;
-    width: 90vh;
     justify-content: center;
     visibility: hidden;
-    margin-top: 25px;
+    align-items: center;
+    padding-right: 30px;
 }
 
 #shareFb,#shareIg,#copy,#favorite {
@@ -79,3 +31,98 @@ h1 {
 #favList {
     text-align: left;
 }
+
+.left-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-height: 100vh;
+    background-color: #689689;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 65px;
+    margin-bottom: 0px;
+    background-color: #689689;
+    font-weight: 700;
+}
+
+.right-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    min-height: 100vh;
+    font: #0f0f0f;
+}
+
+.button-submit {
+    width: 200px;
+    height: 70px;
+    font-size: 18px;
+    background-color:#A49E8D;
+    color: #504136;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.button-submit:hover {
+    background-color: #504136;
+    color: #ffffff;
+    transition-duration: .3s;
+}
+
+.button-submit:focus {
+    outline: none;
+}
+
+#favList li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* .delDiv{
+    display: flex;
+    justify-content: right;
+    align-content: flex-start;
+} */
+
+#deleteAll {
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px){
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        }
+
+    .left-container {
+        width: 100%;
+        min-height: 400px;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .right-container {
+        width: 100%;
+        min-height: 300px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+    }

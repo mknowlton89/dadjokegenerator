@@ -7,28 +7,45 @@
         <title>Dad Jokes</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
 
-        <!-- As a heading
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Dad Joke Generator</span>
+              <a class="navbar-brand" href="#">Dad Joke Generator</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="favorites.html">Favorites</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav> -->
+          </nav>
 
         <div class="main-container">
-            <div class="joke-container">
-                <h1><b>Dad Jokes On Demand</b></h1>
+            <div class="left-container">
+                <h1>Dad Jokes On Demand</h1>
                 <button class="button-submit" onclick="fetchjoke()">I'm Feeling Lucky</button>
             </div>
 
-            <div id="joke"></div>
+            <div class="right-container">
 
-            <div id="engagement-container">
-                <div id="copy" onclick="CopyToClipboard()"><img id="copyicon" src="svgs/clipboard.svg"> Copy</div>
-                <div id="favorite" onclick="favorite()"><img id="favicon" src="svgs/star.svg"> Favorite</div>
+                <div id="joke"></div>
+
+                <div id="engagement-container">
+                    <div id="copy" onclick="CopyToClipboard()"><img id="copyicon" src="svgs/clipboard.svg"> Copy</div>
+                    <div id="favorite" onclick="favorite()"><img id="favicon" src="svgs/star.svg"> Favorite</div>
+                </div>
+                
             </div>
 
     </div>
