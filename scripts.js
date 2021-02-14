@@ -106,3 +106,9 @@ function loadFavorites() {
     }
 
 }
+
+function deleteAll() {
+
+    localStorage.clear("favs");
+
+}
