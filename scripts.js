@@ -98,17 +98,30 @@ function loadFavorites() {
     // Build an array that I can manipulate
     let fullFavsList = JSON.parse(favslist);
 
-    // For loop to loop through array and create list.
-    for (let i = 0; i < fullFavsList.length; i++) {
-        let joke = fullFavsList[i];
-        listItem = document.createElement('li')
-        document.getElementById("favList").appendChild(listItem).innerHTML = joke;
-    }
+    if (fullFavsList == null) {
+        // alert("Local storage is empty");
+        document.getElementById("deleteAll").style.visibility = "hidden";
+        document.getElementById("noFavorites").style.visibility = "visible";
+        }
 
+    else {
+
+    // Hide the "noFavorites" section.
+    document.getElementById("noFavorites").style.visibility = "hidden";
+
+    // For loop to loop through array and create list.
+        for (let i = 0; i < fullFavsList.length; i++) {
+            let joke = fullFavsList[i];
+            listItem = document.createElement('li')
+            document.getElementById("favList").appendChild(listItem).innerHTML = joke;
+        }
+    }  
 }
 
 function deleteAll() {
 
     localStorage.clear("favs");
+
+    location.reload();
 
 }

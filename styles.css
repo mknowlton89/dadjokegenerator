@@ -125,4 +125,7 @@ h1 {
         padding-right: 30px;
         padding-top: 30px;
     }
-    }
+    
+    /* #noFavorites {
+        visibility: hidden;
+    } */
