@@ -110,27 +110,14 @@ function loadFavorites() {
     // Hide the "noFavorites" section.
     document.getElementById("noFavorites").style.visibility = "hidden";
 
-    // // For loop to loop through array and create list.
-    //     for (let i = 0; i < fullFavsList.length; i++) {
-    //         let joke = fullFavsList[i];
-    //         listItem = document.createElement('li');
-    //         listItem.value = i + 1;
-    //         delBtn = document.createElement("button")
-    //         delBtn.innerText = "Delete";
-    //         document.getElementById("favList").appendChild(listItem).innerHTML = joke;
-    //         // document.getElementById("favList").appendChild(delBtn).innerHTML = "Delete"
-    //     }
     // For loop to loop through array and create list.
         for (let i = 0; i < fullFavsList.length; i++) {
             let joke = fullFavsList[i];
-            // <li><button>Delete</button></li>
-            <li>Test</li>
-
-            // listItem = document.createElement('li');
-            // listItem.value = i + 1;
-            // delBtn = document.createElement("button")
-            // delBtn.innerText = "Delete";
-            // document.getElementById("favList").appendChild(listItem).innerHTML = joke;
+            listItem = document.createElement('li');
+            listItem.value = i + 1;
+            delBtn = document.createElement("button")
+            delBtn.innerText = "Delete";
+            document.getElementById("favList").appendChild(listItem).innerHTML = joke;
             // document.getElementById("favList").appendChild(delBtn).innerHTML = "Delete"
         }
     }  
