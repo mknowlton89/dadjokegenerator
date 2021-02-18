@@ -90,12 +90,15 @@ h1 {
 #favList li {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #favList li:hover {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #F6F6F6;
+    border-radius: 30px;
 }
 
 #favJokes {
@@ -108,6 +111,20 @@ h1 {
 #deleteAll {
     justify-content: flex-end;
     cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background-color: ##A49E8D;
+    width: 230px;
+    height: 30px;
+    color: #504136;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#deleteAll:hover {
+    background-color: #504136;
+    color: #ffffff;
+    transition-duration: .3s;
 }
 
 .delDiv {
