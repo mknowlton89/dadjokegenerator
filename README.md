@@ -9,3 +9,9 @@ Share it with Facebook.
 Share it on Instagram.
 
 And favorite it. (The favorites are saved to your browser.)
+
+# Link to the deploy application
+<a href="https://mknowlton89.github.io/dadjokegenerator/">Click Here</a>
+
+# Screenshot of the application
+<img href="Screen Shot 2021-04-06 at 4.52.36 PM.png">
