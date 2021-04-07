@@ -14,4 +14,4 @@ And favorite it. (The favorites are saved to your browser.)
 <a href="https://mknowlton89.github.io/dadjokegenerator/">Click Here</a>
 
 # Screenshot of the application
-<img href="Screen Shot 2021-04-06 at 4.52.36 PM.png">
+<img href="/Users/mknowlton/gt/homework/dadjokegenerator/Screen Shot 2021-04-06 at 4.52.36 PM.png">
